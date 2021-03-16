@@ -24,6 +24,9 @@ action(move,V1,V2,T) :- edge(V1,V2,T).
 
 0{position_robot(R,V2,T2) : action(move,V1,V2,T), T1+T=T2, time(T2) }1 :- position_robot(R,V1,T1).
 
+% TODO : extract the action taken. This is what we want at the end.
+% TODO : change conditionals. I want to be able to take actions anytime and then check if it's good.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Goal
 
