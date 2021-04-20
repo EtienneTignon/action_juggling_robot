@@ -1,0 +1,28 @@
+{move(R,V,V')} :- robot(R), edge(V,V',_), at(R,V,0).
+{move(R,V,V')} :- robot(R), edge(V,V',_), move(R,_,V).
+
+at(R,V) :- move(R,V,_).
+at(R,V) :- move(R,_,V).
+
+1{path(R,V,V',V'') : move(R,V',V'')}1 :- move(R,V,V'), not goal(R,V').
+
+:- goal(R,V), not path(R,_,_,V).
+
+&diff{(R,V',V'')-(R,V,V')} <= 1 :- path(R,V,V',V'').
+&diff{(R,V,V')-(R,V',V'')} <= -1 :- path(R,V,V',V'').
+&diff{(R,V')-(R,V)} <= 1 :- path(R,V,V',_).
+&diff{(R,V)-(R,V')} <= -1 :- path(R,V,V',_).
+&diff{(R,V'')-(R,V')} <= 1 :- path(R,_,V',V'').
+&diff{(R,V')-(R,V'')} <= -1 :- path(R,_,V',V'').
+
+move(r1,v3,v2).
+
+%*
+&diff{(R,V)-(R',V)} <= -1 ; &diff{(R',V)-(R,V)} <= -1 :- at(R,V), at(R',V), R<R'.
+{aux(R,V,R',V')} :- move(R,V,V'), move(R',V',V), R<R'.
+&diff{(R',V',V)-(R,V,V')} <= -1 :- move(R,V,V'), move(R',V',V), R<R', aux(R,V,R',V').
+&diff{(R,V,V')-(R',V',V)} <= -1 :- move(R,V,V'), move(R',V',V), R<R', not aux(R,V,R',V').
+*%
+
+#show bug/1.
+#show path/4.
