@@ -1,3 +1,5 @@
 Having diffreence constrain as a precondition (aka in the body), like action :- difference constraint (action is after the agent is here).
 
 use differents files
+
+At and move without robots.
