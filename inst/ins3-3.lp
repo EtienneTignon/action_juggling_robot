@@ -14,11 +14,11 @@ edge(X,Y,L) :- edge(Y,X,L).
 % Robot
 
 robot(r1).
-at(r1,v1a,0).
+start(r1,v1a).
 robot(r2).
-at(r2,v1b,0).
+start(r2,v1b).
 robot(r2).
-at(r3,v1c,0).
+start(r3,v1c).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Goal

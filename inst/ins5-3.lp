@@ -1,10 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graph
 
-edge(v1a,v1b,1).
-edge(v1b,v1c,1).
-edge(v2a,v2b,1).
-edge(v2b,v2c,1).
+edge(v0,v1a,1).
+edge(v0,v1b,1).
+edge(v0,v1c,1).
 edge(v1a,v2a,1).
 edge(v1b,v2b,1).
 edge(v1c,v2c,1).
@@ -14,21 +13,21 @@ edge(X,Y,L) :- edge(Y,X,L).
 % Robot
 
 robot(r1).
-start(r1,v1a).
-robot(r2).
-start(r2,v2a).
+start(r1,v2a).
 robot(r2).
 start(r2,v2b).
+robot(r3).
+start(r3,v2c).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Goal
 
-goal(r1,v2c).
-goal(r1,v1c).
-goal(r1,v1b).
+goal(r1,v2b).
+goal(r2,v2c).
+goal(r3,v2a).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Time
 
 time(0..horizon).
-#const horizon = 6. %Check optimized time
+#const horizon = 6.

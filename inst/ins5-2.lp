@@ -13,15 +13,18 @@ edge(X,Y,L) :- edge(Y,X,L).
 % Robot
 
 robot(r1).
-at(r1,v2a,0).
+start(r1,v2a).
+robot(r2).
+start(r2,v2b).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Goal
 
 goal(r1,v2b).
+goal(r2,v2c).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Time
 
 time(0..horizon).
-#const horizon = 3.
+#const horizon = 4.
