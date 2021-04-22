@@ -5,6 +5,6 @@ move(R,V,V',T) :- at(R,V,T), at(R,V',T+1), V!=V'.
 
 :- at(R,V,T), at(R,V',T+1), V!=V', not edge(V,V',_).
 
-:- goal(R,V), not at(R,V,_).
+:- goal(R,V), not at(R,V,T), T=horizon.
 
 #show move/4.
