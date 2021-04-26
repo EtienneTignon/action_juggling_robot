@@ -6,6 +6,7 @@ at(R,V,T) :- at(R,V,T-1), not move(R,_,_,T-1), time(T).
 
 :- move(R,V,_,T), not at(R,V,T).
 :- at(_,_,T), not time(T).
+% at(_,_,T), T>horizon is better?
 
 :- goal(R,V), not at(R,V,T), T=horizon.
 
