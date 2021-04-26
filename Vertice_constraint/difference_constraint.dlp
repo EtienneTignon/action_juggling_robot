@@ -1,0 +1,4 @@
+:- at(R,V), at(R',V), R!=R',
+
+% reuse at/3 ?
+% find a way to recover position directly from diff_const ?

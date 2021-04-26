@@ -17,7 +17,7 @@ at(R,V) :- start(R,V).
 &diff{move(R,V,V')-0} <= (horizon-1) :- move(R,V,V').
 return(R,V,V'') :- move(R,V,V'), move(R,V,V''), V'!=V'', &diff{move(R,V,V')-move(R,V,V'')} <= -1.
 &diff{move(R,V,V')-move(R,V',V'')} <= -1 :- move(R,V,V'), move(R,V',V''), not return(R,V,V').
-order(R,V,V',V2,V2') ; order(R,V2,V2',V,V') :- move(R,V,V'), move(R,V2,V2'), (V,V')!=(V2,V2').
-&diff{move(R,V,V')-move(R,V2,V2')} <= -1 :- order(R,V,V',V2,V2').
+priority(move(R,V,V'),move(R,V2,V2') ; priority(move(R,V2,V2'),move(R,V,V') :- move(R,V,V'), move(R,V2,V2'), (V,V')!=(V2,V2').
+&diff{move(R,V,V')-move(R2,V2,V2')} <= -1 :- priority(move(R,V,V'),move(R2,V2,V2').
 
 #show move/3.

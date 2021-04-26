@@ -1,0 +1,3 @@
+:- move(R,V',T), move(R',V,T), at(R,V,T), at(R',V',T), R!=R'.
+
+%note : maybe only use move? Way harder to do ...
