@@ -3,3 +3,5 @@ Having diffreence constrain as a precondition (aka in the body), like action :- 
 Separate path generation and path checking.
 
 Clingon
+
+at(R,V,T) :- at(R,V,T-1), not -at(R,V,T), time(T).

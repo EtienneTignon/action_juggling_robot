@@ -11,3 +11,8 @@ at(R,V,0) :- start(R,V).
 :- goal(R,V), not at(R,V,T), T=horizon.
 
 #show move/4.
+
+% more thing should be an integrity constraint.
+% make assumption clear : edge are always in both side for example
+% maybe check the assumption, like :- be on a vertices who has no edges
+% you can use a dedicated file to this
