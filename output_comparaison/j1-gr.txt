@@ -1,0 +1,133 @@
+x_1.
+x_2.
+x_3.
+x_4.
+x_5.
+x_6.
+x_7.
+x_8.
+x_9.
+x_10.
+x_11.
+x_12.
+x_13.
+x_14.
+x_15.
+x_16.
+x_17.
+x_18.
+x_19.
+x_20.
+x_21.
+x_22.
+at(r1,v2,1) :- move(r1,v2,0).
+at(r1,v3,1) :- move(r1,v3,0).
+at(r1,v4,1) :- move(r1,v4,0).
+at(r1,v1,1) :- move(r1,v1,0).
+at(r1,v2,2) :- move(r1,v2,1).
+at(r1,v3,2) :- move(r1,v3,1).
+at(r1,v4,2) :- move(r1,v4,1).
+at(r1,v1,2) :- move(r1,v1,1).
+at(r1,v2,3) :- move(r1,v2,2).
+at(r1,v3,3) :- move(r1,v3,2).
+at(r1,v4,3) :- move(r1,v4,2).
+at(r1,v1,3) :- move(r1,v1,2).
+at(r1,v2,4) :- move(r1,v2,3).
+at(r1,v3,4) :- move(r1,v3,3).
+at(r1,v4,4) :- move(r1,v4,3).
+at(r1,v1,4) :- move(r1,v1,3).
+x_55 :- move(r1,v2,0).
+x_55 :- move(r1,v3,0).
+x_55 :- move(r1,v4,0).
+x_55 :- move(r1,v1,0).
+x_56 :- move(r1,v2,1).
+x_56 :- move(r1,v3,1).
+x_56 :- move(r1,v4,1).
+x_56 :- move(r1,v1,1).
+x_57 :- move(r1,v2,2).
+x_57 :- move(r1,v3,2).
+x_57 :- move(r1,v4,2).
+x_57 :- move(r1,v1,2).
+x_58 :- move(r1,v2,3).
+x_58 :- move(r1,v3,3).
+x_58 :- move(r1,v4,3).
+x_58 :- move(r1,v1,3).
+at(r1,v1,3) :- at(r1,v1,2), not x_57.
+at(r1,v4,3) :- at(r1,v4,2), not x_57.
+at(r1,v3,3) :- at(r1,v3,2), not x_57.
+at(r1,v2,3) :- at(r1,v2,2), not x_57.
+at(r1,v1,2) :- at(r1,v1,1), not x_56.
+at(r1,v4,2) :- at(r1,v4,1), not x_56.
+at(r1,v3,2) :- at(r1,v3,1), not x_56.
+at(r1,v2,2) :- at(r1,v2,1), not x_56.
+at(r1,v1,1) :- not x_55.
+x_59.
+x_60 :- at(r1,v2,1).
+x_60 :- at(r1,v3,1).
+x_60 :- at(r1,v4,1).
+x_60 :- at(r1,v1,1).
+x_61 :- at(r1,v2,2).
+x_61 :- at(r1,v3,2).
+x_61 :- at(r1,v4,2).
+x_61 :- at(r1,v1,2).
+x_62 :- at(r1,v2,3).
+x_62 :- at(r1,v3,3).
+x_62 :- at(r1,v4,3).
+x_62 :- at(r1,v1,3).
+x_63 :- at(r1,v2,4).
+x_63 :- at(r1,v3,4).
+x_63 :- at(r1,v4,4).
+x_63 :- at(r1,v1,4).
+:- not at(r1,v4,3).
+:- x_63.
+:- move(r1,v3,0).
+:- move(r1,v4,0).
+:- move(r1,v1,0).
+x_64 :- not at(r1,v1,1), not at(r1,v3,1).
+:- move(r1,v2,1), x_64.
+x_65 :- not at(r1,v2,1), not at(r1,v4,1).
+:- move(r1,v3,1), x_65.
+:- move(r1,v4,1), not at(r1,v3,1).
+:- move(r1,v1,1), not at(r1,v2,1).
+x_66 :- not at(r1,v1,2), not at(r1,v3,2).
+:- move(r1,v2,2), x_66.
+x_67 :- not at(r1,v2,2), not at(r1,v4,2).
+:- move(r1,v3,2), x_67.
+:- move(r1,v4,2), not at(r1,v3,2).
+:- move(r1,v1,2), not at(r1,v2,2).
+x_68 :- not at(r1,v1,3), not at(r1,v3,3).
+:- move(r1,v2,3), x_68.
+x_69 :- not at(r1,v2,3), not at(r1,v4,3).
+:- move(r1,v3,3), x_69.
+:- move(r1,v4,3), not at(r1,v3,3).
+:- move(r1,v1,3), not at(r1,v2,3).
+{move(r1,v2,0);move(r1,v3,0);move(r1,v4,0);move(r1,v1,0)} :- x_19.
+x_70 :- 2{move(r1,v2,0); move(r1,v3,0); move(r1,v4,0); move(r1,v1,0)}.
+x_71 :- not x_70.
+:- x_19, not x_71.
+{move(r1,v2,1);move(r1,v3,1);move(r1,v4,1);move(r1,v1,1)} :- x_20.
+x_72 :- 2{move(r1,v2,1); move(r1,v3,1); move(r1,v4,1); move(r1,v1,1)}.
+x_73 :- not x_72.
+:- x_20, not x_73.
+{move(r1,v2,2);move(r1,v3,2);move(r1,v4,2);move(r1,v1,2)} :- x_21.
+x_74 :- 2{move(r1,v2,2); move(r1,v3,2); move(r1,v4,2); move(r1,v1,2)}.
+x_75 :- not x_74.
+:- x_21, not x_75.
+{move(r1,v2,3);move(r1,v3,3);move(r1,v4,3);move(r1,v1,3)} :- x_22.
+x_76 :- 2{move(r1,v2,3); move(r1,v3,3); move(r1,v4,3); move(r1,v1,3)}.
+x_77 :- not x_76.
+:- x_22, not x_77.
+#show robot(r1).
+#show time(0).
+#show time(1).
+#show time(2).
+#show time(3).
+#show start(r1,v1).
+#show at(r1,v1,0).
+#show edge(v1,v2,1).
+#show edge(v2,v3,1).
+#show edge(v3,v4,1).
+#show edge(v4,v3,1).
+#show edge(v3,v2,1).
+#show edge(v2,v1,1).
+#show goal(r1,v4).
