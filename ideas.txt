@@ -4,4 +4,4 @@ Separate path generation and path checking.
 
 Clingon
 
-at(R,V,T) :- at(R,V,T-1), not -at(R,V,T), time(T).
+take care of the _ who can change grounding behaviour
