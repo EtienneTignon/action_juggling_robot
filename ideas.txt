@@ -12,3 +12,6 @@ Add unusual constraints? :
 * Vertices that have to be visited
 * Forbid wait before reaching the goal
 But this is not MAPF
+
+
+take care of the _ who can change grounding behaviour
