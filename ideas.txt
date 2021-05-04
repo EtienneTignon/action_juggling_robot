@@ -1,7 +1,14 @@
-Having diffreence constrain as a precondition (aka in the body), like action :- difference constraint (action is after the agent is here).
+Having difference constrain as a precondition (aka in the body), like action :- difference constraint (action is after the agent is here).
 
 Separate path generation and path checking.
 
 Clingon
 
 at(R,V,T) :- at(R,V,T-1), not -at(R,V,T), time(T).
+
+Add unusual constraints? :
+* No cycle
+* No path intersection (even in different times)
+* Vertices that have to be visited
+* Forbid wait before reaching the goal
+But this is not MAPF
