@@ -23,6 +23,7 @@ Who define who?
 When does the consequence of the action occure?
 * at(R,V,T) :- move(R,V,T) at the time of the action
 * at(R,V,T) :- move(R,V,T-1) after the action
+  (Without duration, all the moves take 1 time to execute. In this way, move() represente the start of the action).
 * at(R,V,T+1) :- move(R,V,T) after the action, but in a worst way
 * at(R,V,T) :- move(R,V,T-0.5) if we put the action between the state
 
