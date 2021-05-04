@@ -1,13 +1,13 @@
 % There is no vertice without an edge
-:- start(R,V), not edge(R,V,_,_), not edge(R,_,V,_).
-:- goal(R,V), not edge(R,V,_,_), not edge(R,_,V,_).
+:- start(R,V), not edge(V,_,_), not edge(_,V,_).
+:- goal(R,V), not edge(V,_,_), not edge(_,V,_).
 
 % Each robot has a (different) goal.
-:- Robot(R), not goal(R,_).
+:- robot(R), not goal(R,_).
 :- goal(R,V), goal(R',V), R!=R'.
 
 % Each robot is on one vertices at each time.
-:- robot(R), not 1{at(R,_,T) : time(T)}1.
+:- robot(R), time(T), not 1{at(R,_,T)}1.
 
 % The graph is non-oriented.
 :- edge(V,V',D), not edge(V',V,D).
