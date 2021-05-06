@@ -6,6 +6,9 @@
 :- robot(R), not goal(R,_).
 :- goal(R,V), goal(R',V), R!=R'.
 
+% Each robot has only one start.
+:- start(R,V), start(R,V'), V!=V'.
+
 % Each robot is on one vertices at each time.
 :- robot(R), time(T), not 1{at(R,_,T)}1.
 

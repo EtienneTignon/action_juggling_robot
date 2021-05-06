@@ -13,4 +13,11 @@ Add unusual constraints? :
 * Forbid wait before reaching the goal
 But this is not MAPF
 
-take care of the _ who can change grounding behaviour
+take care of the _ who can change grounding behavior
+
+
+
+To discuss :
+-constraints
+-DL
+-is no-time complete ?
