@@ -1,5 +1,6 @@
 #include "Path_generation/at_from_moves.lp".
 #include "Add_Diff_Constr/move_4.dlp".
-%#include "assumption.lp".
+#include "Constraints/Edge_constraint/difference_constraint.dlp".
+#include "assumption.lp".
 
 % #include "Path_generation/difference_constraint.dlp"
