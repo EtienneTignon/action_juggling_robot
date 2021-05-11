@@ -6,6 +6,8 @@
 :- robot(R), not goal(R,_).
 :- goal(R,V), goal(R',V), R!=R'.
 
+% Each robot has a start.
+
 % Each robot has only one start.
 :- start(R,V), start(R,V'), V!=V'.
 
