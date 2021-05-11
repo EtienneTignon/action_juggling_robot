@@ -10,7 +10,7 @@
 :- move(R,V,_,T), not at(R,V,T).
 :- at(_,_,T), not time(T).
 
-:- goal(R,V), not at(R,V,T), T=horizon.
+:- goal(R,V), not at(R,V,T), time(T), not time(T+1).
 
 %* V 1.0
 {move(R,V,V',T) : edge(V,V',_)}1 :- time(T), robot(R).

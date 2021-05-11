@@ -5,9 +5,8 @@ at(R,V',T) :- move(R,_,V',T).
 at(R,V,T) :- at(R,V,T-1), not move(R,_,_,T), time(T).
 
 :- move(R,V,_,T), not at(R,V,T).
-:- at(_,_,T), not time(T). %useless?
+% :- at(_,_,T), not time(T). %useless?
 
-:- goal(R,V), not at(R,V,horizon). % we can also remove it. see next line
-% :- goal(R,V), not at(R,V,T), time(T), not time(T+1).
+:- goal(R,V), not at(R,V,T), time(T), not time(T+1).
 
 % #show move/4.

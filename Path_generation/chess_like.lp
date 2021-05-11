@@ -11,6 +11,6 @@ at(R,V,T) :- at(R,V,T-1), not move(R,_,T-1), time(T).
 
 :- at(_,_,T), not time(T).
 
-:- goal(R,V), not at(R,V,T), T=horizon.
+:- goal(R,V), not at(R,V,T), time(T), not time(T+1).
 
 %#show move/3.
