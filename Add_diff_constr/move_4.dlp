@@ -1,7 +1,8 @@
 &diff { move(R,V,V',T) - 0 } <= (horizon-1) :- move(R,V,V',T).
 &diff { 0 - move(R,V,V',T) } <= (0-T) :- move(R,V,V',T).
+&diff{move(R,V,V')-move(R2,V2,V2')} <= -1 :- priority(move(R,V,V'),move(R2,V2,V2',T2)).
 
-&diff { move(R,V1,V1',T1) - move(R,V2,V2',T2) } <= -1 :- move(R,V1,V1',T1), move(R,V2,V2',T2), T1<T2.
+priority(move(R,V1,V1',T1),move(R,V2,V2',T2)) :- move(R,V1,V1',T1), move(R,V2,V2',T2), T1<T2.
 
 %*
 &diff{move(R,V,V')-0} <= (horizon-1) :- move(R,V,V').

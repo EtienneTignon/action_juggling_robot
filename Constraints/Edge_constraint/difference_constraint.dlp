@@ -1,1 +1,1 @@
-priority(move(R,V,V'),move(R',V',V)) ; priority(move(R',V',V),move(R,V,V')) :- move(R,V,V'), move(R',V',V).
+priority(move(R,V,V',T),move(R',V',V,T)) ; priority(move(R',V',V,T),move(R,V,V',T)) :- move(R,V,V',T), move(R',V',V,T).
