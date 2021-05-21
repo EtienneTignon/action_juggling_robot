@@ -15,3 +15,5 @@ at(R,V) :- start(R,V).
 :- goal(R,V), not at(R,V).
 
 #show move/3.
+
+move(R,V,V',undetermined) :- move(R,V,V').

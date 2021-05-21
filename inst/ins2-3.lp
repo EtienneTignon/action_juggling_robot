@@ -31,4 +31,4 @@ goal(r3,v1b).
 % Time
 
 time(0..horizon).
-#const horizon = 6. %Check optimized time
+#const horizon = 3. %Check optimized time
