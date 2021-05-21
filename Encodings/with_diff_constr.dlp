@@ -1,9 +1,8 @@
-#include "../Path_generation/no_robot_position.lp".
+#include "../Path_generation/basic.lp".
 #include "../Add_diff_constr/move_4.dlp".
-#include "../Constraints/Edge_constraint/difference_constraint.dlp".
+% #include "../Constraints/Edge_constraint/difference_constraint.dlp".
+#include "../Constraints/Edge_constraint/at_3.dlp".
+#include "../Constraints/Vertice_constraint/difference_constrain.lp".
 #include "../assumption.lp".
-#include "../Path_generation/difference_constraint.dlp"
 
 #show priority/2.
-
-

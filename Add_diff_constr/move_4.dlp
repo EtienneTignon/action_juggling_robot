@@ -11,3 +11,5 @@ return(R,V,V'') :- move(R,V,V'), move(R,V,V''), V'!=V'', &diff{move(R,V,V')-move
 priority(move(R,V,V'),move(R,V2,V2')) ; priority(move(R,V2,V2'),move(R,V,V')) :- move(R,V,V'), move(R,V2,V2'), (V,V')!=(V2,V2').
 &diff{move(R,V,V')-move(R2,V2,V2')} <= -1 :- priority(move(R,V,V'),move(R2,V2,V2')).
 *%
+
+% hypothesys is &diff { move(R,V,V',T) - 0 } really the same that &diff { move(R,T) - 0 }
