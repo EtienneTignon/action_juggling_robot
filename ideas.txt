@@ -17,9 +17,9 @@ take care of the _ who can change grounding behavior
 
 Can we allow action when consequences are impossible (outside the horizon)
 
-
-
 To discuss :
 -constraints
 -DL
 -is no-time complete ?
+
+generating direction from exit order. (taking the second neighbour for example)
