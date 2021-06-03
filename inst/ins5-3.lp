@@ -30,4 +30,4 @@ goal(r3,v2a).
 % Time
 
 time(0..horizon).
-#const horizon = 6.
+#const horizon = 8.

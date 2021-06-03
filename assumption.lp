@@ -11,8 +11,8 @@
 % Each robot has only one start.
 :- start(R,V), start(R,V'), V!=V'.
 
-% Each robot is on one vertices at each time.
-:- robot(R), time(T), not 1{at(R,_,T)}1.
+% Each robot is on no more than one vertices at each time.
+:- robot(R), time(T), not {at(R,_,T)}1.
 
 % The graph is non-oriented.
 :- edge(V,V',D), not edge(V',V,D).

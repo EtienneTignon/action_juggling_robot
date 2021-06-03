@@ -5,9 +5,9 @@ edge(v1a,v1b,1).
 edge(v1b,v1c,1).
 edge(v2a,v2b,1).
 edge(v2b,v2c,1).
-edge(v1a,v2a,1).
+edge(v1a,v2a,4).
 edge(v1b,v2b,1).
-edge(v1c,v2c,1).
+edge(v1c,v2c,4).
 edge(X,Y,L) :- edge(Y,X,L).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -8,7 +8,7 @@ priority(move(R,V1,V1',T1),move(R,V2,V2',T2)) :- move(R,V1,V1',T1), move(R,V2,V2
 &diff{move(R,V,V')-0} <= (horizon-1) :- move(R,V,V').
 return(R,V,V'') :- move(R,V,V'), move(R,V,V''), V'!=V'', &diff{move(R,V,V')-move(R,V,V'')} <= -1.
 &diff{move(R,V,V')-move(R,V',V'')} <= -1 :- move(R,V,V'), move(R,V',V''), not return(R,V,V').
-priority(move(R,V,V'),move(R,V2,V2')) ; priority(move(R,V2,V2'),move(R,V,V')) :- move(R,V,V'), move(R,V2,V2'), (V,V')!=(V2,V2').
+priority(move(R,V,V'),move(R,V2,V2')) ; priority(move(R,V2,V2'),move(R,V,V')) :- move(R,V,V'), move(R,V2,V2'), (V,V')<(V2,V2').
 &diff{move(R,V,V')-move(R2,V2,V2')} <= -1 :- priority(move(R,V,V'),move(R2,V2,V2')).
 *%
 
