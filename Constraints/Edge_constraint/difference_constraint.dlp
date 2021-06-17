@@ -1,3 +1,3 @@
-priority(move(R,V,V',T),move(R',V',V,T')) ; priority(move(R',V',V,T'),move(R,V,V',T)) :- move(R,V,V',T), move(R',V',V,T').
+{ priority(move(R,V,V',T),move(R',V',V,T')) ; priority(move(R',V',V,T'),move(R,V,V',T)) } = 1 :- move(R,V,V',T), move(R',V',V,T').
 
 % disjunction should be changed by choice

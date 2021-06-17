@@ -1,4 +1,6 @@
-:- at(R,V), at(R',V), R<R', time(T),
+{&diff{move(R,Vc,V',T+1)-move(R',V'',Vc,T')} <= 0 ; &diff{move(R',Vc,V''',T'+1)-move(R,V,Vc,T)} <= 0}=1 :- move(R,V,Vc,T), move(R,Vc,V',T+1), move(R',V'',Vc,T'), move(R',Vc,V''',T'+1), R<R'.
+
+
 
 % reuse at/3 ?
 % find a way to recover position directly from diff_const ?

@@ -1,8 +1,7 @@
 #include "../Path_generation/basic.lp".
 #include "../Add_diff_constr/move_4.dlp".
-% #include "../Constraints/Edge_constraint/difference_constraint.dlp".
-#include "../Constraints/Edge_constraint/at_3.dlp".
-#include "../Constraints/Vertice_constraint/difference_constrain.lp".
+#include "../Constraints/Edge_constraint/difference_constraint.dlp".
+#include "../Constraints/Vertice_constraint/at_3.lp".
 #include "../assumption.lp".
 
 #show priority/2.
