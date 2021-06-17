@@ -1,5 +1,12 @@
 {&diff{move(R,Vc,V',T+1)-move(R',V'',Vc,T')} <= 0 ; &diff{move(R',Vc,V''',T'+1)-move(R,V,Vc,T)} <= 0}=1 :- move(R,V,Vc,T), move(R,Vc,V',T+1), move(R',V'',Vc,T'), move(R',Vc,V''',T'+1), R<R'.
 
+%TODO : one agent start here
+
+%TODO : one agent stop here
+
+%TODO : one agent start here and the other stop here
+
+%Maybe the same things three time ?
 
 
 % reuse at/3 ?
