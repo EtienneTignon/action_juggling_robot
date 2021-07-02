@@ -1,29 +1,23 @@
-vertice((1..5,1)).
-vertice((1..5,2)).
-vertice((1..5,3)).
+#const size=50.
+#const lenght=5.
+
+nbr(1..size).
+
+vertice((Nbr,1..lenght)) :- nbr(Nbr).
 
 edge ((X,Y),(X+1,Y),Y) :- vertice((X,Y)), vertice((X+1,Y)).
 edge ((X,Y),(X,Y+1),X) :- vertice((X,Y)), vertice((X,Y+1)).
 
 edge(V,V',D) :- edge(V',V,D).
 
-robot(r1).
-robot(r2).
-robot(r3).
-robot(r4).
-robot(r5).
+robot(r(Nbr)) :- nbr(Nbr).
 
-start(r1,(1,1)).
-start(r2,(2,1)).
-start(r3,(3,1)).
-start(r4,(4,1)).
-start(r5,(5,1)).
+start(r(Nbr),(Nbr,1)) :- nbr(Nbr).
 
-goal(r1,(5,3)).
-goal(r2,(4,3)).
-goal(r3,(1,3)).
-goal(r4,(3,3)).
-goal(r5,(2,3)).
+goal(r(1),(size,lenght)).
+goal(r(Nbr),(Nbr-1,lenght)) :- nbr(Nbr), Nbr>1.
 
-time(0..horizon).
-#const horizon = 6.
+#show nbr/1.
+
+
+time(0..size+lenght-2).
