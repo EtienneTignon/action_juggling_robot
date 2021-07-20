@@ -1,4 +1,5 @@
 % There is no vertice without an edge
+%  The only verties which need to be checked are the starts and goals of robots
 :- start(R,V), not edge(V,_,_), not edge(_,V,_).
 :- goal(R,V), not edge(V,_,_), not edge(_,V,_).
 
@@ -7,6 +8,7 @@
 :- goal(R,V), goal(R',V), R!=R'.
 
 % Each robot has a start.
+%  No need to enforce that. The syntax allready does.
 
 % Each robot has only one start.
 :- start(R,V), start(R,V'), V!=V'.

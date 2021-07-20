@@ -1,5 +1,5 @@
-#const size=50.
-#const lenght=5.
+#const size=13.
+#const lenght=13.
 
 nbr(1..size).
 

@@ -8,7 +8,7 @@ All the encodings are made for instances composed of :
 * start(R,V) represent the starting point of a robot
 * goal(R,V) represent the goal that a robot must reach
 * time(T) to represent time
-* (some encodings also have direction, with direction(D) and edge(X,D,Y,L))
+* (some encodings also have direction, with direction(D) and edge(X,D,Y,L)) (WIP)
 
 The different files are divided in different folders :
 * Path_generation : those encodings are the one representing the path taken by the robots.
@@ -18,7 +18,7 @@ Collision is not checked at all for example.
  * Vertice_constraint : those encodings are the ones who forbid two robots to be at the same place at the same time.
  * Edge_constraint : those encodings are the ones who forbid two robots to try to take the same path at the same time.
 * Add_diff_constr : used to inject difference constraint with Clingo-DL.
-* Duration : how to represent the fact that actions take time? (Not here yet)
+* Duration : how to represent the fact that actions take time? (WIP)
 
 Files in Path_generation :
 * basic.lp : the "intuitive" one. At each point in time, a move can be taken. Moves are defined by a robot, a starting vertex, an ending vertex and the time at which the action is taken. The position of the robots are determined from the moves.
