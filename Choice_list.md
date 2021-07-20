@@ -1,5 +1,5 @@
 Representation
-* fluent based (lots of fluents, then we check)
+* fluent based (lots of fluents, then we check) (also called generate and check)
 * state based (actions change fluents) (Moves from at or at from moves?)
 * moves from the goal (or from both end) (usefull for reachability)
 
@@ -13,7 +13,7 @@ How to represent the action?
 
 How to represent position?
 * at(R,V,T)
-* at(R,V) but no cycle possible at all! So incomplete
+* at(R,V) but incomplete? (no cycle possible?)
 * You don't, you just use the movements ...
 
 How to define inertia?
