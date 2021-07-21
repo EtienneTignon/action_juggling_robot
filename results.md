@@ -72,6 +72,22 @@ Basic alternatives :
         * Atoms : Similar
     * Solving time :
 
+Entropy alternatives : (Base case : if no mouvement)
+
+    1. If position undefinied
+        * Readability :
+        * Grounding size :
+            * Rules :
+            * Atoms :
+        * Solving time :
+
+    2. Choice based
+        * Readability :
+        * Grounding size :
+            * Rules :
+            * Atoms :
+        * Solving time :
+
 Basic alternatives using difference logic :
 
 1. From ordered path (WIP)
