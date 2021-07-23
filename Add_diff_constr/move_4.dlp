@@ -4,6 +4,9 @@
 
 priority(move(R,V1,V1',T1),move(R,V2,V2',T2)) :- move(R,V1,V1',T1), move(R,V2,V2',T2), T1<T2.
 
+% to make sure the initial plan is just an ordering :
+:- move(R,_,_,T), not move(R,_,_,T-1), T>0.
+
 %*
 &diff{move(R,V,V')-0} <= (horizon-1) :- move(R,V,V').
 return(R,V,V'') :- move(R,V,V'), move(R,V,V''), V'!=V'', &diff{move(R,V,V')-move(R,V,V'')} <= -1.

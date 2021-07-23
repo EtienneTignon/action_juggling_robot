@@ -1,13 +1,14 @@
-{&diff{move(R,Vc,V',T+1)-move(R',V'',Vc,T')} <= 0 ; &diff{move(R',Vc,V''',T'+1)-move(R,V,Vc,T)} <= 0}=1 :- move(R,V,Vc,T), move(R,Vc,V',T+1), move(R',V'',Vc,T'), move(R',Vc,V''',T'+1), R<R'.
+{ wpriority(move(R,Vc,V',T+1),move(R',V'',Vc,T')) ; wpriority(move(R',Vc,V''',T'+1),move(R,V,Vc,T)) }=1 :- move(R,V,Vc,T), move(R,Vc,V',T+1), move(R',V'',Vc,T'), move(R',Vc,V''',T'+1), R<R'.
 
-%TODO : one agent start here
+%one agent start here
+wpriority(move(R',Vc,V',0),move(R,V,Vc,T)) :- move(R,V,Vc,T), move(R,Vc,V',T+1), move(R',Vc,V'',0), R!=R'.
 
-%TODO : one agent stop here
+%one agent stop here
+wpriority(move(R',Vc,V'',T'),move(R,V,Vc,T)) :- move(R,V,Vc,T), not move(R,_,_,T+1), move(R',Vc,V'',T'), R!=R'.
 
-%TODO : one agent start here and the other stop here
-
-%Maybe the same things three time ?
-
+&diff{move(R,V,V'',T)-move(R',V',V''',T')} <= 0 :- wpriority(move(R,V,V'',T),move(R',V',V''',T')).
 
 % reuse at/3 ?
 % find a way to recover position directly from diff_const ?
+
+% Weak prio that allow following. Replace by real prio to forbide it.
