@@ -8,6 +8,7 @@ How to represent the action?
 * move(R,V',T) no need for origin of movements
 * move(R,D,T) the direction at which the agent move (but the notion of direction need to be defined somehow)
 * move(R,V,V') no need for time at which the movements occurs. But doing the same action twice become impossible. Non-optimal. Is it complete though ? (or you say that you can make the same move twice ... it's just not represented. But it seems clunky and useless)
+ * to try : move(V,V',T), move(V,D,T)
 * dl(move(),T) clingo-DL give us the time (from moves(R,V,V',O) the ordered moves, or moves(R,V,V')).
 * You don't, you just use the at to deduce them. But this is the opposite of what we want to do.
 
@@ -19,6 +20,7 @@ How to represent position?
 How to define inertia?
 * if no movements
 * if no other positions described
+ * no inertia. wait as an action (or move(v,v') as an action)
 
 Who define who?
 * moves define at. You choose your actions, then the positions are deduced from them
@@ -35,8 +37,12 @@ When does the consequence of the action occur?
 
 How to check for vertices constraint?
 * if two agent are at the same place at the same time
-* if,at any point in time, the last movement of the two agents put them in the same place
+* if, at any point in time, the last movement of the two agents put them in the same place
 
 How to check for edge constraint?
 * if two agent does the opposite movement at the same time
 * if, at one point, two agents are in two different place and, the time after, the two agents exchanged places.
+
+Reachability :
+* Precondition : the vertice is reachable at time t for an agent (precise one ? or just any agent ?)
+* Reachability from the start. From the end. 
