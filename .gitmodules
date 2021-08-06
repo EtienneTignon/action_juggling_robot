@@ -1,0 +1,3 @@
+[submodule "ajr_paper"]
+	path = ajr_paper
+	url = git@github.com:EtienneTignon/ajr_paper.git
