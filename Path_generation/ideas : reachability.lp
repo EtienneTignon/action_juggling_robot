@@ -1,4 +1,12 @@
-{move(R,V,V',T) : edge(V,V',_)}1 :- time(T), robot(R).
+reachablefs(R,V,0) :- start()
+reachableff(R,V,horizon) :- end()
+
+reachablefs(R,V,T) :- reachablefs(R,V',T-1), linked
+reachableff(R,V,T) :- reachableff(R,V',T+1), linked
+
+reachable(R,V,T) :- reachablefs(R,V,T), reachableff(R,V,T).
+
+{move(R,V,V',T) : edge(V,V',_), reachable(R,V',T)}1 :- time(T), robot(R).
 
 at(R,V,0) :- start(R,V).
 at(R,V',T) :- move(R,_,V',T-1). %time here ?
